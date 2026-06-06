@@ -1,8 +1,8 @@
 # Contribution [#]: [Furniture] Display still displays item after it's been removed
 
 **Contribution Number:** [1 / 2 / 3]  
-**Student:** Osmond Lee
-**Issue:** https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1036
+**Student:** Osmond Lee  
+**Issue:** https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1036  
 **Status:** Phase I Complete
 
 ---
