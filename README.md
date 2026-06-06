@@ -1,4 +1,4 @@
-# Contribution [#]: [Issue Title]
+# Contribution [#]: [[Furniture] Display still displays item after it's been removed]
 
 **Contribution Number:** [1 / 2 / 3]  
 **Student:** Osmond Lee
