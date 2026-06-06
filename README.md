@@ -2,14 +2,14 @@
 
 **Contribution Number:** [1 / 2 / 3]  
 **Student:** Osmond Lee
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Issue:** [[GitHub issue link](https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1036)]  
+**Status:** [Phase I] [Complete]
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+My goal is to work in the games industry as an engineer/technical designer, and this project is exactly the kind of project I want to work on since it lets me directly work on a gameplay feature. Even more specifically, I've played modded minecraft for years and I've always wanted to contribute to an open source mod. I also already know Java, the language used for this, and it'll serve as a refresher for my Java skills since I haven't used it in a while. From this project, I want to learn more about the minecraft mod development process and have that first bit of experience. That way, I'll feel more confident in contributing to mods in the future and hopefully even make my own mod.
 
 ---
 
