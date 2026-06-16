@@ -1,9 +1,9 @@
-# Contribution [#]: [Furniture] Display still displays item after it's been removed
+# Contribution 2: [Furniture] Display still displays item after it's been removed
 
-**Contribution Number:** [1 / 2 / 3]  
+**Contribution Number:** [1]  
 **Student:** Osmond Lee  
 **Issue:** https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1036  
-**Status:** Phase I Complete
+**Status:** Phase 2 Complete
 
 ---
 
@@ -17,15 +17,15 @@ My goal is to work in the games industry as an engineer/technical designer, and 
 
 ### Problem Description
 
-[In your own words, what's broken or missing?]
+When you retrieve an item in a display case, you successfully recieve the item but the item is still visually in the display case.
 
 ### Expected Behavior
 
-[What should happen?]
+The item should no longer be visible inside of the display case.
 
 ### Current Behavior
 
-[What actually happens?]
+The item is visible inside of the display case after retrieval
 
 ### Affected Components
 
@@ -37,20 +37,20 @@ My goal is to work in the games industry as an engineer/technical designer, and 
 
 ### Environment Setup
 
-[Notes on setting up your local development environment - challenges you faced, how you solved them]
+To make the installation process easier, I recommend using Modrinth, CurseForge, or any other established
 
 ### Steps to Reproduce
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+1. Use any minecraft mod launcher to install *Let's Do Furniture*
+2. In a world, place a display case and any item into it.
+3. Interact with the display case again to retrieve your item.
+4. You have your item in your hand, but the display case visually also has the item.
 
 ### Reproduction Evidence
 
 - **Commit showing reproduction:** [Link to commit in your fork]
 - **Screenshots/logs:** [If applicable]
-- **My findings:** [What you discovered during reproduction]
-
+- **My findings:** Bug is exactly as the issue described on the stated version.
 ---
 
 ## Solution Approach
