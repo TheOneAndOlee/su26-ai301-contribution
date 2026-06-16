@@ -1,6 +1,6 @@
-# Contribution 2: [Furniture] Display still displays item after it's been removed
+# Contribution 1: [Furniture] Display still displays item after it's been removed
 
-**Contribution Number:** [1]  
+**Contribution Number:** 1
 **Student:** Osmond Lee  
 **Issue:** https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1036  
 **Status:** Phase 2 Complete
@@ -29,7 +29,10 @@ The item is visible inside of the display case after retrieval
 
 ### Affected Components
 
-[Which parts of the codebase are involved?]
+The java files containing the display block logic. This includes:
+1. `DisplayBlock.java`
+2. `DisplayBlockEntity.java`
+3. `DisplayRenderer.java`
 
 ---
 
@@ -37,19 +40,23 @@ The item is visible inside of the display case after retrieval
 
 ### Environment Setup
 
-To make the installation process easier, I recommend using Modrinth, CurseForge, or any other established
+To make the installation process easier, I recommend using Modrinth, CurseForge, or any other established mod/modpack installer.
 
 ### Steps to Reproduce
 
-1. Use any minecraft mod launcher to install *Let's Do Furniture*
+1. Use any minecraft mod launcher to install *Let's Do Furniture* version 1.1.4 to a NeoForge or Fabric instance using Minecraft version 1.21.1.
 2. In a world, place a display case and any item into it.
-3. Interact with the display case again to retrieve your item.
+3. Interact with the display case again with an empty hand to retrieve your item.
 4. You have your item in your hand, but the display case visually also has the item.
 
 ### Reproduction Evidence
 
-- **Commit showing reproduction:** [Link to commit in your fork]
-- **Screenshots/logs:** [If applicable]
+- **Commit showing reproduction:** N/A - Reproduction can be done in through public mod installation. Compilation of the repo directly is not necessary.
+- **Screenshots/logs:** An image of the display case actively holding the enchanted golden apple. <img width="2557" height="1350" alt="image" src="https://github.com/user-attachments/assets/df198387-d916-4afe-bef3-e335a96c1742" />
+
+After retrieval of the item. The enchanted golden apple is currently in my hand and the apple is not retrievable inside the display case. This is because the apple has been removed on the server-side, but not visually on the client side.
+<img width="2557" height="1350" alt="image" src="https://github.com/user-attachments/assets/683e81e1-2ab0-4382-8831-cf77db2e58a5" />
+
 - **My findings:** Bug is exactly as the issue described on the stated version.
 ---
 
@@ -57,30 +64,33 @@ To make the installation process easier, I recommend using Modrinth, CurseForge,
 
 ### Analysis
 
-[Your analysis of the root cause - what's causing the issue?]
+The logic that handles item visibility in the display case successfully removes the item on the server, but the clients are returned nothing, so the clients don't visually update the display case.
 
 ### Proposed Solution
 
-[High-level description of your fix approach]
+The plan is to return a successful item retrieval, so the clients will update the visuals.
 
 ### Implementation Plan
 
 Using UMPIRE framework (adapted):
 
-**Understand:** [Restate the problem]
+**Understand:** The display case block visually contains an item even after it has been removed. It should no longer be visible in the display case.
 
-**Match:** [What similar patterns/solutions exist in the codebase?]
+**Match:** The Wardrobe and Bin blocks have this pattern, but have a safer pattern. They use an early client check to ensure that all clients update.
 
-**Plan:** [Step-by-step implementation plan]
-1. [Modify file X to do Y]
-2. [Add function Z]
-3. [Update tests]
+**Plan:** 
+1. Modify `DisplayBlock.java` to use the same early return pattern as the Wardrobe and Bin blocks.
+2. Compile, install, and test to ensure functionality.
 
-**Implement:** [Link to your branch/commits as you work]
+**Implement:** My branch: https://github.com/TheOneAndOlee/Let-s-Do-Furniture-Fork
 
-**Review:** [Self-review checklist - does it follow the project's contribution guidelines?]
+**Review:** Items as suggested from `Contributing.md`:
+- [ ] Maintain consistent code style
+- [ ] Keep code clean and organized
+- [ ] Avoid leaving unused code
+- [ ] Keep commit messages clear and concise
 
-**Evaluate:** [How will you verify it works?]
+**Evaluate:** Compile the mod and add it to a modded minecraft instance to test the fix.
 
 ---
 
