@@ -1,9 +1,9 @@
-# Contribution 1: [Furniture] Display still displays item after it's been removed
+# Contribution 2: [Furniture] Display still displays item after it's been removed
 
-**Contribution Number:** 1
+**Contribution Number:** 2
 **Student:** Osmond Lee  
 **Issue:** https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1036  
-**Status:** Phase 2 Complete
+**Status:** Phase 3 Complete
 
 ---
 
@@ -85,10 +85,10 @@ Using UMPIRE framework (adapted):
 **Implement:** My branch: https://github.com/TheOneAndOlee/Let-s-Do-Furniture-Fork
 
 **Review:** Items as suggested from `Contributing.md`:
-- [ ] Maintain consistent code style
-- [ ] Keep code clean and organized
-- [ ] Avoid leaving unused code
-- [ ] Keep commit messages clear and concise
+- [x] Maintain consistent code style
+- [x] Keep code clean and organized
+- [x] Avoid leaving unused code
+- [x] Keep commit messages clear and concise
 
 **Evaluate:** Compile the mod and add it to a modded minecraft instance to test the fix.
 
@@ -98,26 +98,23 @@ Using UMPIRE framework (adapted):
 
 ### Unit Tests
 
-- [ ] Test case 1: [Description]
-- [ ] Test case 2: [Description]
-- [ ] Test case 3: [Description]
+- [ ] Test case: Build, add it to a modpack, and test it in Minecraft.
 
 ### Integration Tests
 
-- [ ] Integration scenario 1
-- [ ] Integration scenario 2
+- N/A, there's no code tests
 
 ### Manual Testing
 
-[What you tested manually and results]
+It works now! The object properly disappears when retrieved.
 
 ---
 
 ## Implementation Notes
 
-### Week [X] Progress
+### Week 3 Progress
 
-[What you built this week, challenges faced, decisions made]
+I built the file for both fabric and neoforge, struggled a little bit with some unsuccessful fixes, but after using Claude and figuring out how the call stack works, I was able to implement and test a working fix.
 
 ### Week [Y] Progress
 
@@ -125,9 +122,9 @@ Using UMPIRE framework (adapted):
 
 ### Code Changes
 
-- **Files modified:** [List]
-- **Key commits:** [Links to important commits]
-- **Approach decisions:** [Why you chose certain approaches]
+- **Files modified:** `DisplayBlockEntity.java`
+- **Key commits:** [Link](https://github.com/Let-s-Do-Collection/Furniture/commit/fa66cb16c1459026eaf3f8734c30fd93c4a53fbd)
+- **Approach decisions:** I immediately looked at the original DisplayBlock.java, but my fixes didn't work, and after more learning via Claude, realized that my changes wouldn't affect the client-side, so I learned about the call stack. After learning about the call stack, I looked through DisplayBlockEntity.java since I saw that similar blocks such as the Wardrobe didn't have the same issue, meaning the DisplayRenderer most likely wasn't the problem. 
 
 ---
 
