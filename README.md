@@ -1,9 +1,9 @@
-# Contribution 2: [Furniture] Display still displays item after it's been removed
+# Contribution 3: [Furniture] Display still displays item after it's been removed
 
-**Contribution Number:** 2
+**Contribution Number:** 3
 **Student:** Osmond Lee  
 **Issue:** https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1036  
-**Status:** Phase 3 Complete
+**Status:** Phase 4 Complete
 
 ---
 
@@ -32,7 +32,6 @@ The item is visible inside of the display case after retrieval
 The java files containing the display block logic. This includes:
 1. `DisplayBlock.java`
 2. `DisplayBlockEntity.java`
-3. `DisplayRenderer.java`
 
 ---
 
@@ -98,7 +97,7 @@ Using UMPIRE framework (adapted):
 
 ### Unit Tests
 
-- [ ] Test case: Build, add it to a modpack, and test it in Minecraft.
+- [x] Test case: Build, add it to a modpack, and test it in Minecraft.
 
 ### Integration Tests
 
@@ -116,9 +115,9 @@ It works now! The object properly disappears when retrieved.
 
 I built the file for both fabric and neoforge, struggled a little bit with some unsuccessful fixes, but after using Claude and figuring out how the call stack works, I was able to implement and test a working fix.
 
-### Week [Y] Progress
+### Week 4 Progress
 
-[Continue documenting as you work]
+I made the PR, and am waiting to get that reviewed!
 
 ### Code Changes
 
@@ -130,15 +129,24 @@ I built the file for both fabric and neoforge, struggled a little bit with some 
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** [[GitHub PR URL when submitted]](https://github.com/Let-s-Do-Collection/Furniture/pull/21)
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Description:** 
+
+Addresses Issue #1036
+
+Change(s) Made
+Added an else statement so that if an item was removed, getUpdateTag in DisplayBlockEntity's returns a new, empty CompoundTag instead of nothing.
+
+Why it fixes the problem
+The else statement makes it so that the Display actually knows that the item was removed, fixing the issue. Before, if an item was removed from the display case, it would still be visible inside of it until a new item is placed or the Display is broken.
+
 
 **Maintainer Feedback:**
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+**Status:** Awaiting Review
 
 ---
 
@@ -146,20 +154,18 @@ I built the file for both fabric and neoforge, struggled a little bit with some 
 
 ### Technical Skills Gained
 
-[What you learned technically]
+- Understanding unfamiliar codebases and APIs
+- Minecraft modding project structure
 
 ### Challenges Overcome
-
-[What was hard and how you solved it]
+Mostly just understanding the call stack, so what functions get called in what order. It's incredibly important in Minecraft especially since it's the most effective way to figure out where bugs lie.
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+I think I'd spend time understanding the Architectury API earlier since I didn't really try to understand how any of the code worked until I understood the API.
 
 ---
 
 ## Resources Used
 
-- [Link to helpful documentation]
-- [Tutorial or Stack Overflow post that helped]
-- [GitHub issues or discussions that helped]
+- https://docs.architectury.dev/
