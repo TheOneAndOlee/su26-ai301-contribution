@@ -1,9 +1,9 @@
-# Contribution 2: Hazelnut Bush drops Sweet Berries with Bone Meal 
+# Contribution 2: Hazelnut Bush drops Sweet Berries with Bone Meal  
 
-**Contribution Number:** 2
-**Student:** Osmond Lee 
-**Issue:** https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1054
-**Status:** Phase 1 Complete
+**Contribution Number:** 2  
+**Student:** Osmond Lee  
+**Issue:** https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues/1054  
+**Status:** Phase 1 Complete  
 
 ---
 
