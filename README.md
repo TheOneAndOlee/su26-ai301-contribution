@@ -67,7 +67,7 @@ systemProp.org.gradle.internal.repository.initial.backoff=1000`
 
 
 ### Reproduction Evidence
-- **Commit showing reproduction:** https://github.com/TheOneAndOlee/WilderNature/tree/fix-issue-1054
+- **Commit showing reproduction:** https://github.com/Let-s-Do-Collection/WilderNature/commit/4fbf93037c755f0f1ee29ecff8b98b54b01bc42e
 
 **Using the GitHub Repo**
 - **Screenshots/logs:** Image 1: Using bone meal correctly spawns a hazelnut: <img width="2557" height="1351" alt="image" src="https://github.com/user-attachments/assets/5b8d349d-efb2-409e-81a0-da6a3f470db4" />
